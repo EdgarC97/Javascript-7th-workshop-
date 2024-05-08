@@ -1,5 +1,16 @@
 //Prototipos base -------------------------------------
 //Constructor de cliente
+
+function Persona (nombre,email,clave,actividad,credentials){
+    this.nombre = nombre;
+    this.email = email;
+    this.clave = clave;
+    this.actvidad = actividad;
+    this.credentials = credentials;
+}
+//Metodos de Persona
+
+
 function Cliente (nombre,email,clave,direccion,telefono) {
     //Propiedades
     this.nombre = nombre;

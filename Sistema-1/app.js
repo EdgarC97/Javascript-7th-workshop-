@@ -1,4 +1,25 @@
 //Prototipos base -------------------------------------
+//Constructor persona
+function Persona (nombre,email,clave,credentials){
+  this.nombre = nombre;
+  this.email = email;
+  this.clave = clave;
+  this.credentials = credentials;
+}
+
+//Metodos de persona
+Persona.prototype.datosPersona = function(){
+  return console.log(`Credenciales de persona:\nSu nombre: ${this.nombre}\nSu Email: ${this.email}\nSu clave: ${this.clave}`);
+}
+
+// Crear una instancia de Persona
+const personaInfo = new Persona ("pepe", "pepe@gmail.com","1234")
+// Llamar a los métodos y atributos
+console.log(personaInfo.nombre);  
+console.log(personaInfo.email);  
+console.log(personaInfo.clave);  
+personaInfo.datosPersona();
+
 //Constructor de usuario
 function Usuario(nombre, email, puntosAcumulados, clave) {
   //Propiedades
@@ -15,6 +36,8 @@ Usuario.prototype.acumularPuntos = function () {
 Usuario.prototype.canjearPuntos = function () {
   return console.log("Canjea puntos");
 };
+
+
 
 //Constructor de administrador
 function Administrador(nombre, email, clave) {
@@ -35,14 +58,7 @@ Administrador.prototype.eliminarUsuario = function () {
 };
 
 // Constructor de Producto
-function Producto(
-  id,
-  nombre,
-  puntosNecesarios,
-  cantidadDisponible,
-  precio,
-  stock
-) {
+function Producto(id,nombre,puntosNecesarios,cantidadDisponible,precio,stock) {
   this.id = id;
   this.nombre = nombre;
   this.puntosNecesarios = puntosNecesarios;
@@ -71,7 +87,6 @@ console.log(miProducto.nombre);  // Imprime: "Producto1"
 miProducto.actualizarId();  // Imprime: "Se actualiza Id"
 miProducto.verPrecio();  // Imprime: "El precio es: 200"
 miProducto.obtenerInfo();  // Imprime: "INFORMACIÓN"
-
 
 
 //Prototipos derivados----------------------------------
